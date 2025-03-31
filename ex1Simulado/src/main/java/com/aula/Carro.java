@@ -47,9 +47,10 @@ public class Carro {
     }
 
     public double acelerar(double aceleracao) {
-        if (estado == estado.MOVENDO && aceleracao >= 0) {
+        if (estado == estado.MOVENDO) {
 
                 return velocidade += aceleracao;
+
         } else return 0;
     }
 

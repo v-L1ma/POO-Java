@@ -21,18 +21,20 @@ public class Radar{
     public void listarCarrosMovendo(){
 
         double velocidadeMedia = 0;
+        int qtd = 0;
 
         for (Carro carro:radar){
             if(carro.getEstado() == EstadoDoCarro.MOVENDO){
              velocidadeMedia +=  carro.getVelocidade();
+             qtd++;
             }
             
         }
 
-        velocidadeMedia = velocidadeMedia / radar.size();
+        velocidadeMedia = velocidadeMedia / qtd;
         
             System.out.println("Carros em movimento:");
-            System.out.println("Quantidade:"+ radar.size());
+            System.out.println("Quantidade:"+ qtd);
             System.out.println("Velocidade media:"+ velocidadeMedia);
 
     }
@@ -41,9 +43,7 @@ public class Radar{
 
         for (Carro carro:radar){
             if(carro.getEstado() == EstadoDoCarro.DESLIGADO){
-            System.out.println("Carro:");
-            System.out.println("Estado:"+carro.getEstado());
-            System.out.println("Velocidade:"+carro.getVelocidade());
+            carro.mostrarEstado();
             }
         }
 
