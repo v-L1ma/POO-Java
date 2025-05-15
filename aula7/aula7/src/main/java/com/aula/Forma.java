@@ -1,6 +1,6 @@
 package com.aula;
 
-public class Forma {
+public abstract class Forma {
 
     private double medida;
 
@@ -12,12 +12,8 @@ public class Forma {
         return medida;
     }
 
-    public double calcularPerimetro(){
-        return 0;
-    }
+    public abstract double calcularPerimetro();
 
-    public double calcularArea(){
-        return 0;
-    }
+    public abstract double calcularArea();
     
 }
