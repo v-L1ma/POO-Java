@@ -1,0 +1,23 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Primeira Pagina</title>
+    <link rel="stylesheet" th:href="@{css/main.css}">
+    <script th:src="@{js/main.js}"></script>
+</head>
+<body>
+    <h1>Hello javinha.</h1>
+    <ul>
+        <li><a th:href="@{/p1}">Pagina 1</a></li>
+        <li>
+            <a th:href="@{/p2}">Pagina 2</a>
+        </li>
+        <li>
+            <a th:href="@{/p3}">Pagina 3</a>
+        </li>
+    </ul>
+    <button onclick="clicar()">Clica aqui</button>
+</body>
+</html>
